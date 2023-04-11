@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <h1>Exercício de P.I.</h1>
+    <div>
+        <canvas id="idChart1"></canvas>
+    </div>
+    <div>
+        <canvas id="idChart2"></canvas>
+    </div>
+
+</body>
+
+<script>
+
+    const labels2 = [
+        'Janeiro',
+        'Fevereiro',
+        'Março',
+        'Abril',
+        'Maio',
+        'Junho',
+    ]
+
+    const data2 = {
+        labels: labels2,
+        datasets: [{
+            label: 'Temperatura média',
+            backgroundColor: 'rgb(255, 192, 203)',
+            data: [22, 22, 28, 22, 20, 18]
+        },
+        {
+            label: 'Umidade média',
+            backgroundColor: 'rgb(137, 207, 240)',
+            data: [90, 89, 92, 88, 89, 82]
+        }
+        ]
+    }
+
+    const config2 = {
+        type: 'bar',
+        data: data2,
+        options: {}
+    }
+
+</script>
+
+<script>
+
+    const labels1 = [
+        '12:00',
+        '13:00',
+        '14:00',
+        '15:00',
+        '16:00',
+        '17:00',
+    ]
+
+    const data1 = {
+        labels: labels1,
+        datasets: [{
+            label: 'Temperatura',
+            backgroundColor: 'rgb(255, 192, 203)',
+            borderColor: 'rgb(255, 192, 203)',
+            data: [22, 22, 28, 22, 20, 18]
+        },
+        {
+            label: 'Umidade',
+            backgroundColor: 'rgb(137, 207, 240)',
+            borderColor: 'rgb(137, 207, 240)',
+            data: [90, 89, 92, 88, 89, 82]
+        }]
+    }
+      
+            
+ 
+
+    const config1 = {
+        type: 'line',
+        data: data1,
+        options: {}
+    }
+
+</script>
+
+<script>
+
+    const idChart2 = new Chart(
+        document.getElementById('idChart2'),
+        config2
+    )
+
+    const idChart1 = new Chart(
+        document.getElementById('idChart1'),
+        config1
+    )
+
+</script>
+
+</html>
